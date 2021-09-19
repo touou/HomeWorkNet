@@ -59,14 +59,7 @@ namespace Home_Work_1_Tests
         [TestMethod]
         public void IsOperatorRight()
         {
-            try
-            {
-                Calculator.Calculate(3232, 3232, (Calculator.operations) 10);
-            }
-            catch (Exception e)
-            {
-                Assert.AreEqual(Calculator.OutOfRangeExcep,e);
-            }
+            
             
             
             try

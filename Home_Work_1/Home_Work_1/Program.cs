@@ -26,11 +26,10 @@ namespace Home_Work_1
         
         public static int Main(string[] args)
         {
-            if (IsArgumentsEnough(args)==2)
+            if (IsArgumentsEnough(args) != 3)
             {
                 return 0;
             }
-            
             if (!Parser.IsInt(args[2],out var num2)||!Parser.IsInt(args[0],out var num1))
             {
                 return 1;

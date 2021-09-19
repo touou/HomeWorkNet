@@ -18,7 +18,7 @@ namespace Home_Work_1
         
         public static Exception DivideZero=new DivideByZeroException("can not divided by zero");
         public static Exception WrongOperator=new ArgumentException("this operator does not exist");
-        public static Exception OutOfRangeExcep=new ArgumentOutOfRangeException("out of range");
+        
         
 
         public static int Calculate(int a,int b,operations operation)
@@ -33,7 +33,7 @@ namespace Home_Work_1
                     result = a - b; 
                     break;
                 case operations.Mult:
-                    result = a * b; 
+                    result = a * b;
                     break;
                 case operations.Divide:
                     if (b == 0)
@@ -44,8 +44,6 @@ namespace Home_Work_1
                     break;
                 case operations.UnknownOperation:
                     throw WrongOperator;
-                default:
-                    throw OutOfRangeExcep;
             }
             return result;
         }
