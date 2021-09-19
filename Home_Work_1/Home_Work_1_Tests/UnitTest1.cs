@@ -85,8 +85,8 @@ namespace Home_Work_1_Tests
         {
             
             Assert.AreEqual(0, Home_Work_1.Program.Main(new [] {""}));
-            Assert.AreEqual(1, Program.Main(new [] {"r","+","t"}));
-            Assert.AreEqual(2, Program.Main(new [] {"1","t","1"}));
+            Assert.AreEqual(1, Program.Main(new [] {"z","+","q"}));
+            Assert.AreEqual(2, Program.Main(new [] {"1","zx","1"}));
             Assert.AreEqual(3, Program.Main(new [] {"31","+","31"}));
         }
         
