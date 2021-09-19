@@ -18,18 +18,22 @@ namespace Home_Work_1
                 return 2;
             }
         }
-        
-        public static int NotEnoughArguments=0;
-        public static int SomeOrAllArgsNotInteger = 1;
-        public static int OperatorDoseNotExist = 2;
-        public static int AllDone = 3;
+
+        enum Exceptions
+        {
+            NotEnoughArguments=0,
+            SomeOrAllArgsNotInteger=1,
+            OperatorDoseNotExist=2,
+            AllDone=3,
+        }
         
         public static int Main(string[] args)
         {
-            if (IsArgumentsEnough(args) != 3)
+            if (IsArgumentsEnough(args)==2)
             {
                 return 0;
             }
+            
             if (!Parser.IsInt(args[2],out var num2)||!Parser.IsInt(args[0],out var num1))
             {
                 return 1;

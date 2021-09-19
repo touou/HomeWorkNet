@@ -5,96 +5,153 @@ using Home_Work_1;
 
 namespace Home_Work_1_Tests
 {
+    [ExcludeFromCodeCoverage]
     [TestClass]
     public class CalculatorTests
     {
         [TestMethod]
         public void Minus()
         {
-            Assert.AreEqual(32 - 21, Calculator.Calculate(32, 21, Calculator.operations.Minus));
-            Assert.AreEqual(140 - 232, Calculator.Calculate(140, 232, Calculator.operations.Minus));
-            Assert.AreEqual(656 - 212, Calculator.Calculate(656, 212, Calculator.operations.Minus));
-            Assert.AreEqual(10002 - 3232, Calculator.Calculate(10002, 3232, Calculator.operations.Minus));
+            //arrange
+            var a = 10;
+            var b = 2;
+            var operation = Calculator.operations.Minus;
+            //act
+            var result = Calculator.Calculate(10, 2, operation);
+            //assert
+            Assert.AreEqual(8, result);
         }
 
         [TestMethod]
         public void Mult()
         {
-            Assert.AreEqual(32 * 21, Calculator.Calculate(32, 21, Calculator.operations.Mult));
-            Assert.AreEqual(140 * 232, Calculator.Calculate(140, 232, Calculator.operations.Mult));
-            Assert.AreEqual(656 * 212, Calculator.Calculate(656, 212, Calculator.operations.Mult));
-            Assert.AreEqual(1002 * 322, Calculator.Calculate(1002, 322, Calculator.operations.Mult));
+            //arrange
+            var a = 10;
+            var b = 11;
+            var operation = Calculator.operations.Mult;
+            //act
+            var result = Calculator.Calculate(10, 11, operation);
+            //assert
+            Assert.AreEqual(110, result);
         }
 
         [ExcludeFromCodeCoverage]
         [TestMethod]
         public void Divide()
         {
+            //arrange
+            var a = 10;
+            var b = 5;
+            var operation = Calculator.operations.Divide;
+            //act
+            var result = Calculator.Calculate(10, 5, operation);
+            //assert
+            Assert.AreEqual(2, result);
+            
+            //arrange
+            var a1 = 10;
+            var b1 = 0;
+            var operation1 = Calculator.operations.Divide;
+            //act
             try
             {
-                Calculator.Calculate(6, 0, Calculator.operations.Divide);
+                Calculator.Calculate(a1, b1, operation1);
             }
-            
+            //assert
             catch (Exception e)
             {
-                Assert.AreEqual(e,Calculator.DivideZero);
+                Assert.AreEqual(Calculator.DivideZero,e);
             }
-            
-            Assert.AreEqual(5/2,Calculator.Calculate(5,2,Calculator.operations.Divide));
-            Assert.AreEqual(9/3,Calculator.Calculate(9,3,Calculator.operations.Divide));
-            Assert.AreEqual(2/3,Calculator.Calculate(2,3,Calculator.operations.Divide));
         }
 
         [TestMethod]
         public void Plus()
         {
-            Assert.AreEqual(3232+2,Calculator.Calculate(3232,2,Calculator.operations.Plus));
-            Assert.AreEqual(32+2,Calculator.Calculate(32,2,Calculator.operations.Plus));
-            Assert.AreEqual(555+313,Calculator.Calculate(555,313,Calculator.operations.Plus));
-            Assert.AreEqual(4+567,Calculator.Calculate(4,567,Calculator.operations.Plus));
-            Assert.AreEqual(11111+5631,Calculator.Calculate(11111,5631,Calculator.operations.Plus));
+            //arrange
+            var a = 10;
+            var b = 5;
+            var operation = Calculator.operations.Plus;
+            //act
+            var result = Calculator.Calculate(10, 5, operation);
+            //assert
+            Assert.AreEqual(15, result);
         }
 
-        [ExcludeFromCodeCoverage]
+        
         [TestMethod]
         public void IsOperatorRight()
         {
-            
-            
-            
+            //arrange
+            var a = 3232;
+            var b = 3232;
+            Calculator.operations operation=default;
+            //act
             try
             {
-                Calculator.Calculate(3232, 3232, default);
+                Calculator.Calculate(a, b, operation);
             }
+            //assert
             catch (Exception e)
             {
                 Assert.AreEqual(Calculator.WrongOperator, e);
             }
-            
         }
 
         [TestMethod]
         public void CoreProcess()
         {
+            //arrange
+            var point0 = 0;
+            var point1 = 1;
+            var point2 = 2;
+            var point3 = 3;
             
-            Assert.AreEqual(0, Home_Work_1.Program.Main(new [] {""}));
-            Assert.AreEqual(1, Program.Main(new [] {"z","+","q"}));
-            Assert.AreEqual(2, Program.Main(new [] {"1","zx","1"}));
-            Assert.AreEqual(3, Program.Main(new [] {"31","+","31"}));
+            //act
+            var result0 = Home_Work_1.Program.Main(new[] {""});
+            var result1 = Program.Main(new[] {"z", "+", "q"});
+            var result2 = Program.Main(new[] {"1", "zx", "1"});
+            var result3 = Program.Main(new[] {"31", "+", "31"});
+            
+            //assert
+            Assert.AreEqual(point0, result0);
+            Assert.AreEqual(point1, result1);
+            Assert.AreEqual(point2, result2);
+            Assert.AreEqual(point3, result3);
         }
         
         [TestMethod]
         public void Parser()
         {
-            Assert.AreEqual(false, Home_Work_1.Parser.IsInt("zxc", out _));
+            //arrange
+            var str1 = "zxc";
+            var str2 = "32";
             
-            Assert.AreEqual(true, Home_Work_1.Parser.IsInt("32", out var res));
+            //act
+            var result1 = Home_Work_1.Parser.IsInt(str1, out _);
+            var result2 = Home_Work_1.Parser.IsInt(str2, out var res);
+            
+            //assert
+            Assert.AreEqual(false, result1);
+            Assert.AreEqual(true, result2);
             Assert.AreEqual(32, res);
             
-            Assert.AreEqual(Calculator.operations.Mult, Home_Work_1.Parser.OperationDetector("*"));
-            Assert.AreEqual(Calculator.operations.Divide, Home_Work_1.Parser.OperationDetector("/"));
-            Assert.AreEqual(Calculator.operations.Minus,Home_Work_1.Parser.OperationDetector("-"));
+            //arrange
+            var symbolPlus = "+";
+            var symbolMinus = "-";
+            var symbolDivide = "/";
+            var symbolMult = "*";
             
+            //act
+            var resultPlus = Home_Work_1.Parser.OperationDetector(symbolPlus);
+            var resultMinus = Home_Work_1.Parser.OperationDetector(symbolMinus);
+            var resultDivide = Home_Work_1.Parser.OperationDetector(symbolDivide);
+            var resultMult = Home_Work_1.Parser.OperationDetector(symbolMult);
+            
+            //assert
+            Assert.AreEqual(Calculator.operations.Plus, resultPlus);
+            Assert.AreEqual(Calculator.operations.Divide, resultDivide);
+            Assert.AreEqual(Calculator.operations.Minus,resultMinus);
+            Assert.AreEqual(Calculator.operations.Mult,resultMult);
         }
 
     }
