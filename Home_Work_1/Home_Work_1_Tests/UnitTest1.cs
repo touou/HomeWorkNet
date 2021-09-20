@@ -144,7 +144,7 @@ namespace Home_Work_1_Tests
             //act
             var result3 = Home_Work_1.Parser.IsInt(str3, out var res2);
             //assert
-            Assert.AreEqual(31,result3);
+            Assert.AreEqual(31,res2);
         }
         
         [TestMethod]
