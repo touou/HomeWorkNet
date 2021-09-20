@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Home_Work_1
 {
-    [ExcludeFromCodeCoverage]
+    
     public class Program
     {
         static int IsArgumentsEnough(string[] arg)

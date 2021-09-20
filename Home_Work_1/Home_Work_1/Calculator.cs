@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Home_Work_1
 {
-    [ExcludeFromCodeCoverage]
+    
     public class Calculator
     {
 
@@ -20,7 +20,7 @@ namespace Home_Work_1
         public static Exception WrongOperator=new ArgumentException("this operator does not exist");
         
         
-
+        [ExcludeFromCodeCoverage]
         public static int Calculate(int a,int b,operations operation)
         {
             var result = 0;
@@ -43,6 +43,7 @@ namespace Home_Work_1
                     result = a / b; 
                     break;
                 case operations.UnknownOperation:
+                    
                     throw WrongOperator;
             }
             return result;

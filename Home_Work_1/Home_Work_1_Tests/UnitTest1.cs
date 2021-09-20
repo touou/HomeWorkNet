@@ -5,7 +5,7 @@ using Home_Work_1;
 
 namespace Home_Work_1_Tests
 {
-    [ExcludeFromCodeCoverage]
+    
     [TestClass]
     public class CalculatorTests
     {
@@ -67,17 +67,19 @@ namespace Home_Work_1_Tests
         [TestMethod]
         public void Plus()
         {
-            //arrange
+            //Arrange
             var a = 10;
             var b = 5;
             var operation = Calculator.operations.Plus;
-            //act
+            
+            //Act
             var result = Calculator.Calculate(10, 5, operation);
-            //assert
+            
+            //Assert
             Assert.AreEqual(15, result);
         }
 
-        
+        [ExcludeFromCodeCoverage]
         [TestMethod]
         public void IsOperatorRight()
         {
@@ -98,7 +100,7 @@ namespace Home_Work_1_Tests
         }
 
         [TestMethod]
-        public void CoreProcess()
+        public void TestMainProcesses()
         {
             //arrange
             var point0 = 0;
@@ -118,40 +120,59 @@ namespace Home_Work_1_Tests
             Assert.AreEqual(point2, result2);
             Assert.AreEqual(point3, result3);
         }
-        
+
         [TestMethod]
-        public void Parser()
+        public void IsElementInteger()
         {
             //arrange
             var str1 = "zxc";
+            //act
+            var result1 = Home_Work_1.Parser.IsInt(str1, out _);
+            //assert
+            Assert.AreEqual(false, result1);
+            
+            //arrange
             var str2 = "32";
             
             //act
-            var result1 = Home_Work_1.Parser.IsInt(str1, out _);
             var result2 = Home_Work_1.Parser.IsInt(str2, out var res);
             
             //assert
-            Assert.AreEqual(false, result1);
             Assert.AreEqual(true, result2);
             Assert.AreEqual(32, res);
-            
+        }
+        
+        [TestMethod]
+        public void IsOperationRight()
+        {
             //arrange
             var symbolPlus = "+";
-            var symbolMinus = "-";
-            var symbolDivide = "/";
-            var symbolMult = "*";
-            
             //act
             var resultPlus = Home_Work_1.Parser.OperationDetector(symbolPlus);
-            var resultMinus = Home_Work_1.Parser.OperationDetector(symbolMinus);
-            var resultDivide = Home_Work_1.Parser.OperationDetector(symbolDivide);
-            var resultMult = Home_Work_1.Parser.OperationDetector(symbolMult);
-            
             //assert
             Assert.AreEqual(Calculator.operations.Plus, resultPlus);
+            
+            //arrange
+            var symbolMinus = "-";
+            //act
+            var resultMinus = Home_Work_1.Parser.OperationDetector(symbolMinus);
+            //assert
+            Assert.AreEqual(Calculator.operations.Minus, resultMinus);
+            
+            //arrange
+            var symbolDivide = "/";
+            //act
+            var resultDivide = Home_Work_1.Parser.OperationDetector(symbolDivide);
+            //assert
             Assert.AreEqual(Calculator.operations.Divide, resultDivide);
-            Assert.AreEqual(Calculator.operations.Minus,resultMinus);
-            Assert.AreEqual(Calculator.operations.Mult,resultMult);
+            
+            //arrange
+            var symbolMult = "*";
+            //act
+            var resultMult = Home_Work_1.Parser.OperationDetector(symbolMult);
+            //assert
+            Assert.AreEqual(Calculator.operations.Mult, resultMult);
+            
         }
 
     }
