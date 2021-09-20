@@ -129,17 +129,22 @@ namespace Home_Work_1_Tests
             //act
             var result1 = Home_Work_1.Parser.IsInt(str1, out _);
             //assert
-            Assert.AreEqual(false, result1);
+            Assert.IsFalse(result1);
             
             //arrange
             var str2 = "32";
-            
             //act
-            var result2 = Home_Work_1.Parser.IsInt(str2, out var res);
-            
+            var result2 = Home_Work_1.Parser.IsInt(str2, out var res1);
             //assert
-            Assert.AreEqual(true, result2);
-            Assert.AreEqual(32, res);
+            Assert.IsTrue(result2);
+            
+            
+            //arrange
+            var str3 = "31";
+            //act
+            var result3 = Home_Work_1.Parser.IsInt(str3, out var res2);
+            //assert
+            Assert.AreEqual(31,result3);
         }
         
         [TestMethod]
