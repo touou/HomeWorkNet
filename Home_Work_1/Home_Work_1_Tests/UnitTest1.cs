@@ -99,27 +99,53 @@ namespace Home_Work_1_Tests
             }
         }
 
-        [TestMethod]
-        public void TestMainProcesses()
+        [TestMethod] 
+        public void IsElementsEnough()
         {
             //arrange
             var point0 = 0;
-            var point1 = 1;
-            var point2 = 2;
-            var point3 = 3;
             
             //act
             var result0 = Home_Work_1.Program.Main(new[] {""});
-            var result1 = Program.Main(new[] {"z", "+", "q"});
-            var result2 = Program.Main(new[] {"1", "zx", "1"});
-            var result3 = Program.Main(new[] {"31", "+", "31"});
-            
+
             //assert
             Assert.AreEqual(point0, result0);
+        }
+
+        [TestMethod] 
+        public void IsElementsInteger()
+        {
+            //arrange
+            var point1 = 1;
+            //act
+            var result1 = Program.Main(new[] {"z", "+", "q"});
+            //assert
             Assert.AreEqual(point1, result1);
+        }
+
+        [TestMethod] 
+        public void IsOperatorAvailable()
+        {
+            //arrange
+            var point2 = 2;
+            //act
+            var result2 = Program.Main(new[] {"1", "zx", "1"});
+            //assert
             Assert.AreEqual(point2, result2);
+        }
+
+        [TestMethod]
+        public void IsDone()
+        {
+            //arrange
+            var point3 = 3;
+            //act
+            var result3 = Program.Main(new[] {"31", "+", "31"});
+            //assert
             Assert.AreEqual(point3, result3);
         }
+        
+        
 
         [TestMethod]
         public void ElementIsString()
