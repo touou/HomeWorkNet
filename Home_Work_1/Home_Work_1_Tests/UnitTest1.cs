@@ -122,7 +122,7 @@ namespace Home_Work_1_Tests
         }
 
         [TestMethod]
-        public void IsElementInteger()
+        public void ElementIsString()
         {
             //arrange
             var str1 = "zxc";
@@ -130,15 +130,22 @@ namespace Home_Work_1_Tests
             var result1 = Home_Work_1.Parser.IsInt(str1, out _);
             //assert
             Assert.IsFalse(result1);
-            
+        }
+        
+        [TestMethod]
+        public void ElementIsInteger()
+        {
             //arrange
             var str2 = "32";
             //act
             var result2 = Home_Work_1.Parser.IsInt(str2, out var res1);
             //assert
             Assert.IsTrue(result2);
-            
-            
+        }
+        
+        [TestMethod]
+        public void IsElementConvertsRight()
+        {
             //arrange
             var str3 = "31";
             //act
@@ -148,7 +155,7 @@ namespace Home_Work_1_Tests
         }
         
         [TestMethod]
-        public void IsOperationRight()
+        public void IsOperationRight_Plus()
         {
             //arrange
             var symbolPlus = "+";
@@ -156,28 +163,39 @@ namespace Home_Work_1_Tests
             var resultPlus = Home_Work_1.Parser.OperationDetector(symbolPlus);
             //assert
             Assert.AreEqual(Calculator.operations.Plus, resultPlus);
-            
+        }
+
+        [TestMethod]
+        public void IsOperationRight_Minus()
+        {
             //arrange
             var symbolMinus = "-";
             //act
             var resultMinus = Home_Work_1.Parser.OperationDetector(symbolMinus);
             //assert
             Assert.AreEqual(Calculator.operations.Minus, resultMinus);
-            
+        }
+
+        [TestMethod]
+        public void IsOperationRight_Divide()
+        {
             //arrange
             var symbolDivide = "/";
             //act
             var resultDivide = Home_Work_1.Parser.OperationDetector(symbolDivide);
             //assert
             Assert.AreEqual(Calculator.operations.Divide, resultDivide);
-            
+        }
+
+        [TestMethod]
+        public void IsOperationRight_Mult()
+        {
             //arrange
             var symbolMult = "*";
             //act
             var resultMult = Home_Work_1.Parser.OperationDetector(symbolMult);
             //assert
             Assert.AreEqual(Calculator.operations.Mult, resultMult);
-            
         }
 
     }
