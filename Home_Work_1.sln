@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_Work_1", "Home_Work_1\Home_Work_1.csproj", "{B43E3054-AE87-45D5-92A7-DEBD9D56AE85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_Work_1", "Home_Work_1\Home_Work_1\Home_Work_1.csproj", "{B43E3054-AE87-45D5-92A7-DEBD9D56AE85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_Work_1_Tests", "Home_Work_1_Tests\Home_Work_1_Tests.csproj", "{6D75E6A8-51B9-4C5C-8B58-EB3576CBEED6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_Work_1_Tests", "Home_Work_1\Home_Work_1_Tests\Home_Work_1_Tests.csproj", "{6D75E6A8-51B9-4C5C-8B58-EB3576CBEED6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
