@@ -6,4 +6,8 @@
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\ILzxc\ILzxc.ilproj" />
+    </ItemGroup>
+
 </Project>
