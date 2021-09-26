@@ -2,6 +2,8 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Home_Work_1;
+using ILzxc;
+using Calculator = Home_Work_1.Calculator;
 
 namespace Home_Work_1_Tests
 {
