@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.NetworkInformation;
 
 namespace Home_Work_1
@@ -15,6 +16,7 @@ namespace Home_Work_1
             }
         }
         
+        [ExcludeFromCodeCoverage]
         public static Calculator.operations OperationDetector(string arg)
         {
             Calculator.operations operation;
