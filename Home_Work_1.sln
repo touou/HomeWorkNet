@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_Work_1_Tests", "Home_W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILzxc", "ILzxc\ILzxc.ilproj", "{D1C94148-0126-4D28-A05E-3441FFB796EC}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSLibrary", "FSLibrary\FSLibrary.fsproj", "{9410254E-A4C6-4565-B7DD-1AA7E16E7ED8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{D1C94148-0126-4D28-A05E-3441FFB796EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1C94148-0126-4D28-A05E-3441FFB796EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1C94148-0126-4D28-A05E-3441FFB796EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9410254E-A4C6-4565-B7DD-1AA7E16E7ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9410254E-A4C6-4565-B7DD-1AA7E16E7ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9410254E-A4C6-4565-B7DD-1AA7E16E7ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9410254E-A4C6-4565-B7DD-1AA7E16E7ED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

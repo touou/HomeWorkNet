@@ -34,19 +34,19 @@ namespace Home_Work_1
                 return 0;
             }
             
-            if (!ILzxc.Parser.IsInt(args[2],out var num2)||!ILzxc.Parser.IsInt(args[0],out var num1))
+            if (!FSLibrary.FSParser.IsInt(args[2],out var num2)||!FSLibrary.FSParser.IsInt(args[0],out var num1))
             {
                 return 1;
             }
 
-            var operation = ILzxc.Parser.OperationDetector(args[1]);
+            var operation = FSLibrary.FSParser.OperationDetector(args[1]);
             
-            if (operation==ILzxc.Calculator.operations.UnknownOperation)
+            if (operation==FSLibrary.FSCalculator.operations.UnknownOperator)
             {
                 return 2;
             }
 
-            var result=ILzxc.Calculator.Calculate(num1, num2, operation);
+            var result=FSLibrary.FSCalculator.Calculate(num1, num2, operation);
             
             Console.WriteLine($"{num1}{args[1]}{num2}={result}");
             
