@@ -12,15 +12,29 @@ module FSCalculator =
     | Mult
     | UnknownOperator
     
+    let Sum (val1,val2) =
+        val1+val2
+     
+    let Minus (val1,val2) =
+        val1-val2
+    
+    let Mult(val1,val2)=
+        val1*val2
+    
+    let Divide(val1,val2)=
+        val1/val2
+        
+    
+    
     let Calculate (val1:int) (val2:int) _Operation =
         match _Operation with
         | UnknownOperator -> failwith NotOperator
-        | Plus -> val1 + val2
-        | Minus -> val1 - val2
-        | Mult -> val1 * val2
+        | Plus -> Sum(val1,val2)
+        | Minus -> Minus(val1,val2)
+        | Mult -> Mult(val1,val2)
         | Divide ->
             try
-                val1 / val2
+                Divide(val1,val2)
             with
             | :? System.DivideByZeroException -> failwith DivByZ
         
