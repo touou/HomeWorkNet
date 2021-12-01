@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HW6Giraffe", "HW6Giraffe.fsproj", "{6B6A78A4-06B9-4723-818E-FAB9D17CFCFD}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSLibraryHW5", "..\FSLibraryHW5\FSLibraryHW5.fsproj", "{432A0469-73ED-4979-A1C0-F59EBAADCCA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW6Tests", "HW6Tests\HW6Tests.csproj", "{3D302EDC-CBD6-4212-A894-D8A2A91EF927}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B6A78A4-06B9-4723-818E-FAB9D17CFCFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B6A78A4-06B9-4723-818E-FAB9D17CFCFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B6A78A4-06B9-4723-818E-FAB9D17CFCFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B6A78A4-06B9-4723-818E-FAB9D17CFCFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{432A0469-73ED-4979-A1C0-F59EBAADCCA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{432A0469-73ED-4979-A1C0-F59EBAADCCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{432A0469-73ED-4979-A1C0-F59EBAADCCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{432A0469-73ED-4979-A1C0-F59EBAADCCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D302EDC-CBD6-4212-A894-D8A2A91EF927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D302EDC-CBD6-4212-A894-D8A2A91EF927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D302EDC-CBD6-4212-A894-D8A2A91EF927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D302EDC-CBD6-4212-A894-D8A2A91EF927}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

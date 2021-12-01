@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SfAbuzZZer</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+<h1>Calculator by Giraffe</h1>
+<form method="GET" action="https://localhost:5001/calc">
+    <div id="inputContainer">
+        <input type="text" name="value1" placeholder="Number1=" value="">
+        <input type="text" name="value2" placeholder="Number2=" value="">
+    </div>
+    <div id="operationsContainer">
+        <div class="operation" id="plus">
+            <div class="operationBack">
+                sum
+            </div>
+            <button type="submit" name="operation" value="sum"></button>
+        </div>
+        <div class="operation" id="minus">
+            <div class="operationBack">
+                minus
+            </div>
+            <button type="submit" name="operation" value="minus"></button>
+        </div>
+        <div class="operation" id="mult">
+            <div class="operationBack">
+                multiply
+            </div>
+            <button type="submit" name="operation" value="mult"></button>
+        </div>
+        <div class="operation" id="div">
+            <div class="operationBack">
+                divide
+            </div>
+            <button type="submit" name="operation" value="div"></button>
+        </div>
+    </div>
+</form>
+</body>
+
+</html>
