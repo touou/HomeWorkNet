@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using HW8_DI.Models;
+using HW7Reflection.Models;
 
-namespace HW8_DI.Controllers
+namespace HW7Reflection.Controllers
 {
     public class HomeController : Controller
     {
@@ -22,6 +22,7 @@ namespace HW8_DI.Controllers
         {
             return View();
         }
+
         public IActionResult Privacy()
         {
             return View();
