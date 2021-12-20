@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW8_DI", "HW8_DI\HW8_DI.csproj", "{752A6CAC-76A5-4C21-B9C4-8B96ADAB4278}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSLibraryHW5", "..\FSLibraryHW5\FSLibraryHW5.fsproj", "{7130AE28-CEAF-46C8-874C-FAC8096C42BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW8_Tests", "HW8_Tests\HW8_Tests.csproj", "{33D47FEC-7951-4F36-92E9-AD10962F4172}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{752A6CAC-76A5-4C21-B9C4-8B96ADAB4278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752A6CAC-76A5-4C21-B9C4-8B96ADAB4278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752A6CAC-76A5-4C21-B9C4-8B96ADAB4278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752A6CAC-76A5-4C21-B9C4-8B96ADAB4278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7130AE28-CEAF-46C8-874C-FAC8096C42BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7130AE28-CEAF-46C8-874C-FAC8096C42BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7130AE28-CEAF-46C8-874C-FAC8096C42BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7130AE28-CEAF-46C8-874C-FAC8096C42BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D47FEC-7951-4F36-92E9-AD10962F4172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D47FEC-7951-4F36-92E9-AD10962F4172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D47FEC-7951-4F36-92E9-AD10962F4172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D47FEC-7951-4F36-92E9-AD10962F4172}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
