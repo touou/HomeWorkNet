@@ -10,6 +10,7 @@ module ParserHW5 =
     let private resultNumber = ResultBuilder(eMessage)
     
     
+    
     let getOperator operator =
         ResultBuilder(notOperation) {
             if (operator="+" || operator="/" || operator="-" || operator="*") then

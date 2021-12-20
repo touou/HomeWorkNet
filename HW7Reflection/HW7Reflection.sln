@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW7Reflection", "HW7Reflection\HW7Reflection.csproj", "{5952A99A-B1AF-493B-B03F-BF8B63F5F246}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5952A99A-B1AF-493B-B03F-BF8B63F5F246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5952A99A-B1AF-493B-B03F-BF8B63F5F246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5952A99A-B1AF-493B-B03F-BF8B63F5F246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5952A99A-B1AF-493B-B03F-BF8B63F5F246}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
