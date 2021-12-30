@@ -3,9 +3,9 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace HW9ExpressionTrees.Models
+namespace Hw10IQueryable.Models
 {
-    public class Visitor : ExpressionVisitor
+    public class Visitor : ExpressionVisitor, ICalculatorVisitor
     {
         protected override Expression VisitBinary(BinaryExpression node)
         {
