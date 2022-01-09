@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using HW9ExpressionTrees.Models;
 
-namespace HW9ExpressionTrees
+namespace Hw10IQueryable.Models
 {
     internal static class ExpressionParser
     {
