@@ -8,7 +8,8 @@ type Values=
     {
         Value1 : string
         Value2 : string
-        Operation : string }
+        Operation : string
+    }
 
 let CalculatorHttpHandler : HttpHandler =
     fun next ctx ->
