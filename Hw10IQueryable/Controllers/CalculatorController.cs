@@ -1,15 +1,8 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using HW9ExpressionTrees.Models;
+﻿using System.Linq.Expressions;
+using Hw10IQueryable.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
 
-
-
-namespace HW9ExpressionTrees.Controllers
+namespace Hw10IQueryable.Controllers
 {
     public class CalculatorController : Controller
     {

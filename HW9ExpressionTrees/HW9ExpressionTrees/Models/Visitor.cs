@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using System;
+using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,10 +23,10 @@ namespace HW9ExpressionTrees.Models
                 ExpressionType.Subtract => leftVal - rightVal,
                 ExpressionType.Multiply => leftVal * rightVal,
                 ExpressionType.Divide => leftVal / rightVal,
+                _ => throw new Exception("we cant do that right now")
             };
 
             return Expression.Constant(result);
         }
-        
     }
 }

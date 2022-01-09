@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using HW9ExpressionTrees.Models;
 
-namespace HW9ExpressionTrees
+namespace HW11Dynamic.Models
 {
-    internal static class ExpressionParser
+    public class ExpressionParser
     {
-         public static Expression Parse(string s)
+        public static Expression Parse(string s)
         {
             int bracketCount = 0;
             int operatorIndex = -1;
@@ -38,28 +34,11 @@ namespace HW9ExpressionTrees
                 }
                 return Expression.Constant(int.Parse(s)); // mb problems
             }
-            
-            var right = Parse(s[operatorIndex] == '-' ? Negative(s[(operatorIndex + 1)..]) :
-                s[(operatorIndex + 1)..]);
-            return Expression.MakeBinary(ParseExpressionType(s[operatorIndex]), Parse(s[..operatorIndex]),
-                right);
+            return Expression.MakeBinary(parseExpressionType(s[operatorIndex]), Parse(s[..operatorIndex]),
+                Parse(s[(operatorIndex + 1)..]));
         }
 
-        private static string Negative(string expression)
-        {
-            var sb = new StringBuilder(expression);
-            for (var i = 0; i < sb.Length; i++)
-            {
-                if (sb[i] is '-')
-                    sb[i] = '+';
-                if (sb[i] is '+')
-                    sb[i] = '-';
-            }
-
-            return sb.ToString();
-        }
-        
-        private static ExpressionType ParseExpressionType(char c)
+        private static ExpressionType parseExpressionType(char c)
         {
             return c switch
             {

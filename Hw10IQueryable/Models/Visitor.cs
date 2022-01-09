@@ -1,17 +1,13 @@
-﻿using System.Linq.Expressions;
+﻿using System;
+using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace HW11Dynamic.Models
+namespace Hw10IQueryable.Models
 {
     public class Visitor : ExpressionVisitor, ICalculatorVisitor
     {
-        public Expression Visit(Expression node)
-        {
-            return Visit((dynamic) node);
-        }
-
-        private Expression Visit(BinaryExpression node)
+        protected override Expression VisitBinary(BinaryExpression node)
         {
             var left = Task.Run(() => Visit(node.Left));
             var right = Task.Run(() => Visit(node.Right));
@@ -27,14 +23,10 @@ namespace HW11Dynamic.Models
                 ExpressionType.Subtract => leftVal - rightVal,
                 ExpressionType.Multiply => leftVal * rightVal,
                 ExpressionType.Divide => leftVal / rightVal,
+                _ => throw new Exception("we cant do that right now")
             };
 
             return Expression.Constant(result);
-        }
-
-        private Expression Visit(ConstantExpression node)
-        {
-            return node;
         }
     }
 }
