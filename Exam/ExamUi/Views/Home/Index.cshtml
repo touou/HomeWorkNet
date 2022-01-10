@@ -1,0 +1,31 @@
+﻿@model Character
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-controller="Home" asp-action="Fight" method="post">
+    <select id="ddlViewBy" name="characterId">
+        @if (ViewBag.Heroes != null)
+        {
+            @foreach (var character in ViewBag.Heroes)
+            {
+                <option value="@character.Name">
+                    @character.Name
+                </option>
+            }
+        }
+    </select>
+    <button type="submit">FIGHT!</button>
+</form>
+
+<p>
+_____________________________________________________
+|dont wanna play for this characters? do it yourself|
+|___________________________________________________|
+</p>
+
+<form asp-controller="Home" asp-action="Fight">
+    
+    @Html.EditorForModel()
+    <input type="submit" value="FIGHT!"/>
+</form>

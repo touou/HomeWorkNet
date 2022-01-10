@@ -1,0 +1,49 @@
+@model ExamUi.Controllers.HomeController.FightModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<form method="post" asp-controller="Home" asp-action="Fight">
+    name
+    <input name="name" value="@Model.AfterFight.Name"/>
+    hitPoints
+    <input name="hitPoints" value="@Model.AfterFight.HitPoints"/>
+    attackModifier
+    <input name="attackModifier" value="@Model.AfterFight.AttackModifier"/>
+    AttackPerRound
+    <input name="AttackPerRound" value="@Model.AfterFight.AttackPerRound"/>
+    Damage
+    <input name="Damage" value="@Model.AfterFight.Damage"/>
+    DiceType
+    <input name="DiceType" value="@Model.AfterFight.DiceType"/>
+    DamageModifier
+    <input name="DamageModifier" value="@Model.AfterFight.DamageModifier"/>
+    Weapon
+    <input name="Weapon" value="@Model.AfterFight.Weapon"/>
+    Ac
+    <input name="Ac" value="@Model.AfterFight.Ac"/>
+    
+    @if (Model.AfterFight.HitPoints <0)
+    {
+        <button disabled>Fight Again</button>
+        <input type="submit" value="back to main page" asp-controller="Home" asp-action="Index">
+    }
+    else
+    {
+        <button type="submit">Fight Again</button>
+    }
+    
+</form>
+
+@Html.DisplayFor(model => model.Character)
+
+@if (Model.Log is not null)
+{
+@foreach (var str in Model!.Log.Split('\n'))
+{
+    <p>@str</p>
+}
+}
+
